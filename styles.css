@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("curtain.png");
+    /* background-size: cover; */   
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    /* background-color: white; */
+      background: url('clock.png');
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    height: 6px;
+    background-color: #333;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.hour {
+    width: 35%;
+    height: 8px;
+    right:50% ;
+}
+
+.minute {
+    right: 50%;
+    width: 45%;
+    height: 6px;
+}
+.clock .nine{
+    font-size: 30px;
+    position: absolute;
+    top: 41%;
+}
+.clock .six{
+    font-size: 30px;
+    position: absolute;
+    bottom: 0%;
+    right: 45%;
+}
+.clock .twelve{
+    font-size: 30px;
+    position: absolute;
+    top: 0%;
+    right: 42%;
+}
+.clock .three{
+    font-size: 30px;
+    position: absolute;
+    top: 41%;
+    right: 0;
+}
+.second {
+    width: 50%;
+    height: 2px;
+    background-color: red;
+}
+
+.center {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+@media(min-width: 992px) {
+    .clock{
+        width: 400px;
+        height: 400px;
+    }
+}
